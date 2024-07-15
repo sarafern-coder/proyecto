@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ConfirmarEnvio"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="10dp"
+    tools:context="com.loeches.proyectogrupo3_tienda.vistas.OrderFormActivity">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_gravity="left"
+        android:background="@drawable/logotienda"
+        app:layout_constraintBottom_toTopOf="@+id/direccion"
+        app:layout_constraintEnd_toStartOf="@+id/textView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@drawable/logotienda" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="209dp"
+        android:layout_height="43dp"
+        android:layout_marginTop="16dp"
+        android:background="@android:color/holo_orange_dark"
+        android:backgroundTint="@android:color/holo_orange_dark"
+        android:paddingLeft="10dp"
+        android:text="Formulario envío"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/Datosremitente"
+        android:layout_width="187dp"
+        android:layout_height="99dp"
+        android:layout_marginStart="20dp"
+        android:hint="Remitente:"
+        android:paddingLeft="10dp"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/direccion" />
+
+
+    <EditText
+        android:id="@+id/direccion"
+        android:layout_width="375dp"
+        android:layout_height="77dp"
+        android:layout_marginTop="52dp"
+        android:hint="Dirección de envío:"
+        android:paddingLeft="10dp"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.444"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <TextView
+        android:id="@+id/Numeropaquetes"
+        android:layout_width="187dp"
+        android:layout_height="97dp"
+        android:layout_marginEnd="4dp"
+        android:paddingLeft="10dp"
+        android:text="Número paquetes:"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/direccion" />
+
+    <EditText
+        android:id="@+id/Destinatario"
+        android:layout_width="249dp"
+        android:layout_height="72dp"
+        android:layout_marginStart="40dp"
+        android:paddingLeft="10dp"
+        android:hint="Nombre y apellidos del cliente:"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Datosremitente" />
+
+    <EditText
+        android:id="@+id/telefono"
+        android:layout_width="311dp"
+        android:layout_height="50dp"
+        android:background="@android:color/holo_orange_dark"
+        android:paddingLeft="10dp"
+        android:hint="Teléfono de contacto:"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/correoElectronico" />
+
+    <EditText
+        android:id="@+id/correoElectronico"
+        android:layout_width="312dp"
+        android:layout_height="48dp"
+        android:background="@android:color/holo_orange_dark"
+        android:paddingLeft="10dp"
+        android:hint="Correo electrónico:"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.393"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Destinatario" />
+
+    <TextView
+        android:id="@+id/fecha"
+        android:layout_width="357dp"
+        android:layout_height="42dp"
+        android:background="@android:color/holo_orange_dark"
+        android:paddingLeft="10dp"
+        android:text="Fecha prevista de entrega:"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.425"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/telefono" />
+
+    <Button
+        android:id="@+id/confirmarOrden"
+        android:layout_width="209dp"
+        android:layout_height="58dp"
+        android:layout_marginBottom="32dp"
+        android:backgroundTint="@android:color/holo_orange_dark"
+        android:text="Confirmar datos de envío"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/codigo_barras" />
+
+    <ImageView
+        android:id="@+id/codigo_qr"
+        android:layout_width="94dp"
+        android:layout_height="81dp"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="60dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.637"
+        app:layout_constraintStart_toEndOf="@+id/Destinatario"
+        app:layout_constraintTop_toBottomOf="@+id/Numeropaquetes"
+        app:srcCompat="@drawable/codigo_qr" />
+
+    <ImageView
+        android:id="@+id/codigo_barras"
+        android:layout_width="198dp"
+        android:layout_height="97dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fecha"
+        app:srcCompat="@drawable/codigo_barras" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

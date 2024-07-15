@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="10dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="0dp"
+            android:layout_height="75dp"
+            android:layout_marginTop="20dp"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/logotienda" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_weight="1"
+            android:text="Hola Pepito."
+            android:textAlignment="textStart"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/Separador1"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginTop="98dp"
+        android:background="@color/black" />
+
+    <!-- RecyclerView para listar los productos -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view_products"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_above="@+id/cart_container"
+        android:layout_below="@+id/Separador1"
+        android:clipToPadding="false"
+        android:padding="16dp"
+        android:layout_weight="1" />
+
+    <!-- Contenedor para el icono del carrito -->
+    <RelativeLayout
+        android:id="@+id/cart_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="16dp">
+
+        <!-- Icono del carrito -->
+        <Button
+            android:id="@+id/img_cart"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:contentDescription="Carrito de compras"
+            android:background="@drawable/carro"
+            android:src="@drawable/carro" />
+
+        <!-- Contador de productos seleccionados -->
+        <TextView
+            android:id="@+id/txt_cart_count"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_alignTop="@id/img_cart"
+            android:layout_alignEnd="@id/img_cart"
+            android:background="@drawable/circle_background"
+            android:gravity="center"
+            android:text="0"
+            android:textColor="@android:color/white" />
+    </RelativeLayout>
+
+    <!-- Botón para ir al formulario de envío -->
+    <Button
+        android:id="@+id/btn_go_to_form"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="16dp"
+        android:text="Ir al Envío" />
+</RelativeLayout>

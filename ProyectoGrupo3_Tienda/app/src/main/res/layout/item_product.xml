@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="8dp">
+
+    <ImageView
+        android:id="@+id/Imagen"
+        android:layout_width="100dp"
+        android:layout_height="143dp"
+        android:src="@drawable/placeholder"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/Nombre"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Nombre del Producto"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/Imagen"
+        app:layout_constraintTop_toTopOf="@+id/Imagen" />
+
+    <TextView
+        android:id="@+id/Precio"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Precio del Producto"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="@+id/Nombre"
+        app:layout_constraintStart_toStartOf="@+id/Nombre"
+        app:layout_constraintTop_toBottomOf="@+id/Nombre" />
+
+    <TextView
+        android:id="@+id/Definicion"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Definición del Producto"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="@+id/Precio"
+        app:layout_constraintStart_toStartOf="@+id/Precio"
+        app:layout_constraintTop_toBottomOf="@+id/Precio" />
+
+    <Button
+        android:id="@+id/Anadido"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/carro"
+        android:gravity="bottom|end"
+        android:text="Añadir"
+        app:layout_constraintBottom_toBottomOf="@+id/Imagen"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Definicion"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/txt_quantity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:text="0"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/Imagen" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
